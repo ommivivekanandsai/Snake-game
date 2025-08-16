@@ -1,0 +1,130 @@
+body {
+  background: #bdc3d1;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+h1 {
+  margin: 30px 0 10px 0;
+  font-size: 2.2em;
+  text-shadow: 2px 2px 10px #0009;
+}
+
+#game-container {
+  position: relative;
+  width: 400px;
+  max-width: 94vw;
+  margin: 0 auto;
+}
+
+#gameCanvas,
+#backgroundCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  max-width: 94vw;
+  max-height: 94vw;
+  border-radius: 20px;
+  box-shadow: 0 10px 32px rgba(95, 80, 80, 0.4);
+}
+
+#backgroundCanvas {
+  z-index: 0;
+}
+
+#gameCanvas {
+  z-index: 1;
+  background: transparent;
+}
+
+#score-level {
+  position: relative;
+  margin: 410px 0 8px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15em;
+  font-weight: 500;
+  background: #232a3aee;
+  border-radius: 8px;
+  padding: 6px 18px;
+  box-shadow: 0 2px 8px #0002;
+  width: 100%;
+  max-width: 380px;
+}
+
+#mobile-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  user-select: none;
+}
+
+#mobile-controls button {
+  background: linear-gradient(145deg, #242b3e 55%, #232a3a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  margin: 6px;
+  box-shadow: 0 4px 16px #0005;
+  transition: background 0.18s, box-shadow 0.18s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+#mobile-controls button:active {
+  background: #2ecc40;
+  color: #111;
+  box-shadow: 0 2px 5px #0009 inset;
+}
+
+#mobile-controls svg {
+  width: 40px;
+  height: 40px;
+}
+
+#restart {
+  margin-top: 14px;
+  font-size: 1.2em;
+  padding: 8px 22px;
+  background: linear-gradient(90deg, #32ff84 60%, #1ed760 100%);
+  color: #16251c;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #0003;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+#restart:hover {
+  background: linear-gradient(90deg, #000000 60%, #80b394 100%);
+}
+
+@media (max-width: 500px) {
+  #game-container,
+  #gameCanvas,
+  #backgroundCanvas {
+    width: 94vw;
+    height: 94vw;
+    min-width: 220px;
+    min-height: 220px;
+    max-width: 99vw;
+    max-height: 30vw;
+  }
+  #score-level {
+    margin-top: 95vw;
+    max-width: 94vw;
+  }
+}

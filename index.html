@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Snake Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>NAGI GAME</h1>
+  <div id="game-container">
+    <canvas id="backgroundCanvas" width="400" height="400"></canvas>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="score-level">
+      <span id="score">Score: 0</span>
+      <span id="level">Level: 1</span>
+    </div>
+    <div id="mobile-controls">
+      <button id="up" aria-label="Up"><svg height="40" width="40"><polygon points="20,10 32,30 8,30" fill="#fff" /></svg></button>
+      <div>
+        <button id="left" aria-label="Left"><svg height="40" width="40"><polygon points="10,20 30,8 30,32" fill="#fff" /></svg></button>
+        <button id="down" aria-label="Down"><svg height="40" width="40"><polygon points="8,10 32,10 20,30" fill="#fff" /></svg></button>
+        <button id="right" aria-label="Right"><svg height="40" width="40"><polygon points="30,20 10,8 10,32" fill="#fff" /></svg></button>
+      </div>
+    </div>
+    <button id="restart" style="display:none;">Restart</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
